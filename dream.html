@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/stylesheet.css" />
+    <link rel="stylesheet" href="css/dream.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    />
+    <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+    <title>Dream</title>
+  </head>
+  <body>
+    <!-- heding part stats here -->
+    <section id="header">
+      <div class="header container">
+        <div class="nav-bar">
+          <div class="brand">
+            <a href="index.html">
+              <h1 class="glow"><span>h</span>ey <span>s</span>iri</h1>
+            </a>
+          </div>
+          <div class="nav-list">
+            <div class="hamburger">
+              <div class="bar"></div>
+            </div>
+            <ul>
+              <li><a href="index.html" data-after="Love">Love</a></li>
+              <li>
+                <a href="memories.html" data-after="Memories">Memories</a>
+              </li>
+              <li><a href="dream.html" data-after="dream">dream</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- heading part ends here. -->
+
+    <!-- body part -->
+
+    <section class="home" id="home">
+      <video
+        class="video-slide active"
+        src="video/wave.mp4"
+        autoplay
+        muted
+        loop
+      ></video>
+      <video class="video-slide" src="video/01.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="video/2.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="video/3.mp4" autoplay muted loop></video>
+      <div class="content active">
+        <h1>Wonderful.<br /><span>Island</span></h1>
+        <p class="white">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo,
+          exercitationem modi. Quidem ad quasi temporibus fuga nihil vel animi,
+          nisi velit asperiores illo? Dolor omnis optio et, sed laudantium
+          ipsam?
+        </p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
+    </section>
+
+    <!-- end body part -->
+
+    <script type="text/javascript">
+      // video slider
+      const btns = document.querySelectorAll(".nav-btn");
+      const slides = document.querySelectorAll(".video-slide");
+      const contents = document.querySelectorAll(".content");
+
+      var sliderNav = function (manual) {
+        btns.forEach((btn) => {
+          btn.classList.remove("active");
+        });
+
+        slides.forEach((slide) => {
+          slide.classList.remove("active");
+        });
+
+        contents.forEach((content) => {
+          content.classList.remove("active");
+        });
+
+        btns[manual].classList.add("active");
+        slides[manual].classList.add("active");
+        contents[manual].classList.add("active");
+      };
+
+      btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+          sliderNav(i);
+        });
+      });
+      // end video slider
+    </script>
+    <script src="JS/index.js"></script>
+  </body>
+</html>
