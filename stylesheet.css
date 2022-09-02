@@ -220,7 +220,7 @@ p {
 /* hero section */
 
 #hero {
-  background-image: url(/images/siri.jpg);
+  background-image: url(siri.jpg);
   background-size: cover;
   background-position: top center;
   position: relative;
